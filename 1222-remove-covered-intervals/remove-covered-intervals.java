@@ -1,10 +1,11 @@
 class Solution {
     public int removeCoveredIntervals(int[][] intervals) {
-        Arrays.sort(intervals, (a,b) -> {
+        //sorting the intervals
+        Arrays.sort(intervals, (a,b) -> {//by trigering ascending and descending
             if(a[0] == b[0]){
-                return b[1]-a[1];   
+                return b[1]-a[1];   //triggers ascending, -ve return
             }
-            return a[0] - b[0];
+            return a[0] - b[0];     //triggers descending , +ve return.
         });
 
         int count =1;
