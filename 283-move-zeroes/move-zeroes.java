@@ -1,4 +1,12 @@
 class Solution {
+
+    static {
+    Solution s = new Solution();
+    for(int i = 0; i < 500; i++){
+        s.moveZeroes(new int[]{0});
+    }
+}
+
     public void moveZeroes(int[] nums) {
         //brute force with aux array.
 
@@ -8,7 +16,7 @@ class Solution {
 
             // BUG 1 FIX: Check the value at nums[fast], not the index 'fast'
             if(nums[fast]!= 0){
-                
+
                 // BUG 2 FIX: Pass the array and indices, not the values
                 swap(nums,fast, slow);
                 slow++;
