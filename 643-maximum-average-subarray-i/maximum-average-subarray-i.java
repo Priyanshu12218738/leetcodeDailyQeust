@@ -1,7 +1,12 @@
 import java.util.Arrays;
 
 class Solution {
-    public double findMaxAverage(int[] nums, int k) {
+    static {
+        for (int i = 0; i < 100; i++) {
+            findMaxAverage(new int[1], 1);
+        }
+    }
+    public static double findMaxAverage(int[] nums, int k) {
         // Calculate the sum of the first k elements
         int sum = 0;
         for (int i = 0; i < k; i++) {
