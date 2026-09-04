@@ -4,8 +4,8 @@ class Solution {
         HashSet<Character> j = new HashSet<>();        
         int count =0;
         //store 
-        for(char c : jewels.toCharArray()){
-            j.add(c);
+        for(int i=0; i<jewels.length(); i++){
+            j.add(jewels.charAt(i));
         }
         //check
         for(int i=0; i<stones.length(); i++){
